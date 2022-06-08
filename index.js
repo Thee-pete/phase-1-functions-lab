@@ -30,11 +30,8 @@ function distanceTravelledInFeet(drop, destination){
 }
 function calculatesFarePrice(start, destination){
 
-    if(destination > start){
-    distanceToCharge = (destination - start)*264;
-    }else{
-        distanceToCharge =(start -destination)*264;
-    }
+  
+    distanceToCharge = distanceTravelledInFeet(start, destination);
    
     if(distanceToCharge <= 400){
         fare = 0; 
